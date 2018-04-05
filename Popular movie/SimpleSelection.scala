@@ -9,7 +9,7 @@ import scala.io.Codec
 import java.io._
 
 /** Count up how many of each star rating exists in the MovieLens 100K data set. */
-object Question1 {
+object SimpleSelection {
   
   /** Load up a Map of movie IDs to movie names. */
   def loadMovieNames() : Map[Int, String] = {
@@ -96,7 +96,7 @@ object Question1 {
     val results = sortedMoviesWithNames.collect()
     results.foreach(println)
     
-    val file = "Question1.txt"    
+    val file = "SimpleSelection.txt"    
     val writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file)))
     for (x <- results) {
         writer.write(x + "\n")
