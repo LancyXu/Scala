@@ -7,7 +7,7 @@ import org.apache.log4j._
 import scala.collection.mutable.ArrayBuffer
 import java.io._
 
-object Question2 {
+object FriendsRecommendation {
   
   type Data= (Int, Array[Int]) 
   /** Converts a line of raw input into (user, connections) */
@@ -172,8 +172,8 @@ object Question2 {
     
     output.foreach(print)
     
-    // Export to "Question2.txt"
-    val file = "Question2.txt"    
+    // Export to "FriendsRecommendation.txt"
+    val file = "FriendsRecommendation.txt"    
     val writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file)))
 
     for (x <- output) {
