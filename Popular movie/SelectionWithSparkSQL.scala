@@ -11,7 +11,7 @@ import org.apache.spark.sql.functions._
 import java.io._
 
 
-object Question1 {
+object SelectionWithSparkSQL {
    /** Load up a Map of movie IDs to movie names. */
   def loadMovieNames() : Map[Int, String] = {
     
@@ -82,7 +82,7 @@ object Question1 {
 //    }
     
     // Output into text file
-    val file = "Assignment3_Question1.txt"    
+    val file = "SelectionWithSparkSQL.txt"    
     val writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file)))
     for (x <- output) {
         writer.write(names(x(0).asInstanceOf[Int]) + ":" + x(1)+ "," + x(2) + "\n")
